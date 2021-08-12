@@ -5,7 +5,7 @@ const DATA_PADRAO = new Date('2021-12-01T00:00:00')
 let dataOriginal
 
 describe('IntervaloDatas tests', () => {
-    test('contém o primeiro dia do mês', () => {
+    test('renderiza o primeiro dia do mês', () => {
         render(<IntervaloDatas />)
 
         expect(screen.getByText('01/07/2021')).toBeInTheDocument()
