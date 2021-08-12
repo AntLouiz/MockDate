@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DateInput = () => {
+export const IntervaloDatas = () => {
 
     const formatarData = (data) => {
         const dia = data.getDate().toString().padStart(2, "0")
@@ -27,7 +27,7 @@ export const DateInput = () => {
     return (
         <div>
             <span>
-                Range de datas:
+                Intervalo de datas:
             </span>
             <br/>
             <div>

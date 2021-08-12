@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { DateInput } from './components/DateInput'
+import { IntervaloDatas } from './components/IntervaloDatas'
 
 function App() {
   return (
     <div className="App">
-      <DateInput />
+      <IntervaloDatas />
     </div>
   );
 }
