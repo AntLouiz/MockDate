@@ -11,7 +11,7 @@ describe('IntervaloDatas tests', () => {
         expect(screen.getByText('01/07/2021')).toBeInTheDocument()
     })
 
-    test('contém o primeiro dia do mês (classe inteira) ', () => {
+    test('renderiza o primeiro dia do mês (classe inteira) ', () => {
         dataOriginal = Date
         global.Date = class extends Date {
             constructor(date) {
@@ -29,7 +29,7 @@ describe('IntervaloDatas tests', () => {
         global.Date = dataOriginal
     })
 
-    test('contém o primeiro dia do mês (spy on e mockImplementation) ', () => {
+    test('renderiza o primeiro dia do mês (spy on e mockImplementation) ', () => {
         jest.spyOn(global, 'Date')
             .mockImplementation(() => DATA_PADRAO)
         render(<IntervaloDatas />)
@@ -39,7 +39,7 @@ describe('IntervaloDatas tests', () => {
         expect(primeiraData).toBeInTheDocument()
     })
 
-    test('contém o primeiro dia do mês (setSystemTime e useFakeTimers) ', () => {
+    test('renderiza o primeiro dia do mês (setSystemTime e useFakeTimers) ', () => {
         jest.useFakeTimers('modern')
         jest.setSystemTime(DATA_PADRAO)
         render(<IntervaloDatas />)
